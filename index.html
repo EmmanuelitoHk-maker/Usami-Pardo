@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usami</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --red: #e10600;
+      --green: #00ff9c;
+      --white: #ffffff;
+      --text: #f5f5f5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #111, #000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* CONTENITORE CON GLOW TRICOLORE */
+    .card-wrapper {
+      position: relative;
+      border-radius: 24px;
+    }
+
+    .card-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 28px;
+      background: linear-gradient(
+        135deg,
+        #e10600,
+        #ffffff,
+        #00ff9c
+      );
+      filter: blur(22px);
+      opacity: 0.75;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(15, 15, 15, 0.97);
+      padding: 42px 36px;
+      border-radius: 24px;
+      max-width: 95vw;
+      width: 590px;
+      text-align: center;
+      box-shadow: 0 0 50px rgba(0,0,0,0.85);
+    }
+  .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 80px rgba(135, 1, 1, 0.6);
+  }
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 12px rgba(225,6,0,0.6));
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 26px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    .services {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* PULSANTI – GRADIENTE PIÙ PULITO */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, #0f0f0f, #e10600);
+      transition: all 0.25s ease;
+      box-shadow: 0 0 18px rgba(225,6,0,0.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.04);
+      background: linear-gradient(135deg, #e10600, #00ff9c);
+      color: #000;
+      box-shadow: 0 0 35px rgba(0,255,156,0.6);
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card-wrapper">
+    <div class="card">
+
+      <img src="logo24.png" class="logo">
+
+      <h1>PARDO GIULIO</h1>
+      <div class="subtitle">Sindacato Aeronautica Militare</div>
+
+      <div class="services">  
+        Segretario Regionale USAMI per l'Aeronautica Militare<br>
+      </div>
+
+      <div class="buttons">
+        <a class="btn" href="https://wa.me/393387164585" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+
+        <a class="btn" href="mailto:pardogiulio56@gmail.com">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+
+        <a class="btn" href="https://www.instagram.com/usami_aeronautica/" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+
+        <a class="btn" href="https://usami-aeronautica.it/" target="_blank">
+          <i class="fas fa-globe"></i> Sito Web
+        </a>
+      </div>
+
+      <div class="footer">
+        © DE Design
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
